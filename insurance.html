@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Website</title>
+
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<!-- Favicon -->
+<link href="./img/icon/Your Insurance wala logo.png" rel="icon" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&display=swap" rel="stylesheet">
+
+<!-- Animate.css (required for WOW.js) -->
+<link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+<!-- Owl Carousel CSS -->
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar styling */
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    /* Carousel text overlay */
+    .card-img-overlay {
+      background: rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .card-img-overlay h5 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .card-img-overlay p {
+      font-size: 1.1rem;
+    }
+
+    .hero {
+  min-height: 90vh;
+  background: url('./images/Insurance.jpg')
+              no-repeat center center/cover;
+  position: relative;
+}
+
+/* Optional dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+    /* About section */
+    .about-section {
+      background: #f8f9fa;
+      padding: 4rem 1rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    /* Card hover effect */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card-img-top {
+  width: 100%;
+  height: 220px;        /* fixed height */
+  object-fit: cover;    /* crop nicely without distortion */
+}
+
+    /* Why Choose Us section */
+    .feature-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Special stats section */
+    .stats-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .stats-section p {
+      font-size: 1rem;
+      color: #f1f1f1;
+    }
+
+    /* Forms */
+    form .form-label {
+      font-weight: 500;
+    }
+
+    form button {
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      font-size: 0.9rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .card-img-overlay h5 {
+        font-size: 1.5rem;
+      }
+
+      .card-img-overlay p {
+        font-size: 1rem;
+      }
+
+      .stats-section h1 {
+        font-size: 2rem;
+      }
+    }
+
+    #logo-img {
+      height: 40px;
+      width: auto;
+      filter: contrast(110%) brightness(150%);
+    }
+    /* TEAM PREMIUM */
+.team-card {
+  transition: all 0.3s ease;
+}
+
+.team-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.team-img img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.1);
+}
+
+.team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+/* TESTIMONIAL PREMIUM */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* SECTION */
+.protect-section {
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+  border-radius: 25px;
+  padding: 50px 25px;
+  position: relative;
+}
+
+/* TITLE cleaner */
+.protect-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.protect-title span {
+  background: #fff;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.protect-title::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #00c6ff);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  border-radius: 5px;
+}
+
+/* CATEGORY TITLE */
+.protect-category {
+  font-weight: 700;
+  margin: 30px 0 15px;
+}
+
+/* CARD - smaller & cleaner */
+.protect-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #eef2f7;
+  height: 110px;   /* ✅ fixed compact height */
+}
+
+/* Glow effect */
+.protect-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, transparent, rgba(13,110,253,0.2), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.protect-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover */
+.protect-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(13,110,253,0.15);
+}
+
+/* ICON - smaller + BLUE */
+.protect-card img {
+  width: 38px;   /* ✅ reduced from 55px */
+  height: 38px;
+  margin-bottom: 6px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(98%) saturate(1352%) hue-rotate(210deg) brightness(95%) contrast(95%);
+  /* converts icons to blue tone */
+}
+
+.protect-card:hover img {
+  transform: scale(1.1);
+}
+
+/* TEXT */
+.protect-card h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;   /* black text */
+  margin-bottom: 0;
+}
+
+/* BADGE - blue instead of pink */
+.protect-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #0d6efd;   /* Bootstrap blue */
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+/* OWL NAV FIX */
+.owl-nav {
+  display: none;
+}
+
+.owl-dots {
+  margin-top: 10px;
+}
+
+/* Gradient Background */
+.assist-strip {
+  background: linear-gradient(270deg, #509be9 0%, #82e6fe 100%);
+  min-height: 150px;
+  border-radius: 16px;
+  margin: 20px;
+  padding: 15px 0;
+}
+
+/* Car Insurance Strip Background */
+.car-strip {
+  background: linear-gradient(270deg, #509be9 0%, #82e6fe 100%);
+  border-radius: 5px;
+  padding: 15px 0;
+}
+
+/* Image Styling */
+.assist-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.6);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Text tweak */
+.assist-strip h4 {
+  letter-spacing: 0.3px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top">
+    <div class="container">
+      <img src="./images/Your Insurance wala logo.png" alt="Logo" id="logo-img">
+      <a class="navbar-brand" href="#">Your Insurance Wala</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Why Choose Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <a class="btn btn-light" href="#">Get Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Slider -->
+   <section class="hero text-white d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Content -->
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h1 class="fw-bold">Secure Your Future with Trusted Insurance Guidance</h1>
+        <p class="lead">Helping individuals and families choose the right insurance plans with clarity, transparency, and care.
+</p>
+        <a href="#" class="btn btn-primary mt-3">Free Consultation</a>
+        <a href="#" class="btn btn-primary mt-3">Compare Plan</a>
+      </div>
+
+      
+      <!-- Right Card -->
+      <div class="col-md-6">
+        <div class="card p-4 shadow">
+
+          <!-- Title -->
+          <h4 class="fw-bold text-center">Quick Quote</h4>
+          <p class="text-muted text-center mb-4">
+            Get your personalized quote in minutes
+          </p>
+
+          <!-- Options -->
+          <div class="row g-3 text-center">
+            <div class="col-6">
+              <i class="fa-solid fa-heart-pulse fa-2x text-primary"></i>
+              <p class="mt-2 mb-0">Health</p>
+            </div>
+            <div class="col-6">
+              <i class="fa-solid fa-user-shield fa-2x text-primary"></i>
+              <p class="mt-2 mb-0">Life</p>
+            </div>
+            <div class="col-6">
+              <i class="fa-solid fa-car fa-2x text-primary"></i>
+              <p class="mt-2 mb-0">Auto</p>
+            </div>
+            <div class="col-6">
+              <i class="fa-solid fa-house fa-2x text-primary"></i>
+              <p class="mt-2 mb-0">Home</p>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary w-100">Start Your Quote</a>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+      </div>
+      </section>
+
+  <!-- Who We Are start -->
+  <section class="about-section my-5">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Who We Are</h2>
+      <p class="lead col-md-8 mx-auto">At Your Insurance Wala, we are committed to helping individuals and families secure their future with confidence. Founded with a mission to simplify insurance and make it accessible for everyone, we provide expert guidance tailored to your unique financial needs. Led by experienced insurance advisor Vinay Kumar, our team brings years of industry knowledge in health, life, and general insurance solutions.</p>
+      <p class="lead col-md-8 mx-auto">We understand that choosing the right insurance plan can be overwhelming. That’s why we focus on offering clear, honest, and personalized advice to help you make informed decisions. Whether you are looking to protect your health, safeguard your loved ones, or secure your assets, we are here to guide you every step of the way.</p>
+    </div>
+  </section>
+  <!-- Who We Are end -->
+
+    <!-- 24/7 Assistance start -->
+  <section class="assist-strip d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Image -->
+      <div class="col-md-3 text-center">
+        <img src="https://images.rawpixel.com/image_social_square/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI1LTA3L3NyLWltYWdlLTI1MDYyNS1qZTAxLXMtODYxLW1jdmg1N3NhLmpwZw.jpg"
+             alt="AI Assistant"
+             class="assist-img">
+      </div>
+
+      <!-- Content -->
+      <div class="col-md-9 text-md-start text-center">
+        <h4 class="fw-bold mb-1 text-dark">24/7 Assistance</h4>
+        <p class="mb-0 text-dark opacity-75">
+          Get instant help anytime, anywhere. Our team is always ready to support you with quick and reliable assistance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- 24/7 Assistance start -->
+
+
+  <!-- Why Choose Us start-->
+  <section class="about-section my-5">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Why Choose Us</h2>
+      <p class="lead col-md-8 mx-auto">We're committed to providing exceptional service and comprehensive protection</p>
+      <!-- points -->
+      <section class="container my-5">
+        <div class="row g-4 text-center">
+          <div class="col-md-3">
+            <div class="p-4 border rounded feature-box">
+              <i class="fa-solid fa-shield-halved fs-1 mb-3 text-primary"></i>
+              <h5>Comprehensive Coverage</h5>
+              <p>Protection tailored to your unique needs and lifestyle</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 border rounded feature-box">
+              <i class="fa-solid fa-tags fs-1 mb-3 text-primary"></i>
+              <h5>Competitive Rates</h5>
+              <p>Best value insurance plans with transparent pricing</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 border rounded feature-box">
+              <i class="fa-solid fa-headset fs-1 mb-3 text-primary"></i>
+              <h5>24/7 Support</h5>
+              <p>Round-the-clock customer service for claims and queries</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-4 border rounded feature-box">
+              <i class="fa-solid fa-user-check fs-1 mb-3 text-primary"></i>
+              <h5>Trusted Provider</h5>
+              <p>Over 25 years of experience serving millions of customers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- points end  -->
+    </div>
+  </section>
+  <!-- Why Choose Us end-->
+
+  <!-- Car insurance start-->
+  <section class="car-strip text-center py-2">
+    <h4 style="color: #0a2753;">
+      Car insurance starts at <strong>Rs2094*</strong>
+    </h4>
+  </section>
+  <!-- Car insurance start -->
+
+  <!-- We Provide start  -->
+  <section class="container my-5">
+  <div class="protect-section">
+
+    <h2 class="protect-title text-center wow fadeInDown">
+      <span>We Provide professional Insurance Services</span>
+    </h2>
+
+    <!-- MOTOR -->
+    <h5 class="protect-category text-center wow fadeInLeft">Motor Insurance</h5>
+    <div class="owl-carousel protect-carousel wow fadeInUp">
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/car-side-view.svg">
+        <h6>Car</h6>
+        <div class="protect-badge">Starting ₹2094</div>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/motorcycle-side-view.svg">
+        <h6>Bike</h6>
+        <div class="protect-badge">Starting ₹714</div>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/Autorikshaw.svg">
+        <h6>Rickshaw</h6>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/commercial_car_2.svg">
+        <h6>Taxi</h6>
+      </div>
+
+    </div>
+
+    <!-- HEALTH -->
+    <h5 class="protect-category text-center wow fadeInLeft">Health Insurance</h5>
+    <div class="owl-carousel protect-carousel wow fadeInUp">
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/health_2.svg">
+        <h6>Health</h6>
+        <div class="protect-badge">Infinity Wallet</div>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/img/super-top-up-health-insurance.svg">
+        <h6>Top-up</h6>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/individual-health-insurance-illus_medical_costs.svg">
+        <h6>Arogya</h6>
+      </div>
+
+      <div class="protect-card">
+        <i class="fa-solid fa-user-injured fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Accident Insurance</h6>
+      </div>
+
+    </div>
+
+    <!-- PROPERTY -->
+    <h5 class="protect-category text-center wow fadeInLeft">Travel & Property</h5>
+    <div class="owl-carousel protect-carousel wow fadeInUp">
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/international_travel_insurance_2.svg">
+        <h6>Travel</h6>
+        <div class="protect-badge">₹225</div>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/home_2.svg">
+        <h6>Home</h6>
+      </div>
+
+      <div class="protect-card">
+        <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/icons/shop_2.svg">
+        <h6>Shop</h6>
+      </div>
+
+      <div class="protect-card">
+        <i class="fa-solid fa-user-graduate fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Student Travel</h6>
+      </div>
+
+    </div>
+
+    <!-- Business Insurance -->
+    <h5 class="protect-category text-center wow fadeInLeft">Business Insurance</h5>
+    <div class="owl-carousel protect-carousel wow fadeInUp">
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-ship fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Marine Cargo</h6>
+        <div class="protect-badge">₹225</div>
+      </div>
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-users fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Group Health</h6>
+      </div>
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-fire fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Fire & Burglary</h6>
+      </div>
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-ferry fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Marine Open</h6>
+      </div>
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-helmet-safety fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Workmen Insurance</h6>
+      </div>
+    
+      <div class="protect-card">
+        <i class="fa-solid fa-user fs-4 my-2" style="color: rgb(20, 94, 205);"></i>
+        <h6>Professional Indemnity</h6>
+      </div>
+    
+    </div>
+
+</div>
+
+  </div>
+</section>
+  <!-- We Provide end  -->
+
+  <!-- Stats Section start-->
+  <section class="stats-section bg-primary text-white py-5 text-center rounded-3 mx-3">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Join Hundreds of Satisfied Customers</h2>
+      <p class="lead mb-5">Experience peace of mind with insurance that truly protects.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h1>250+</h1>
+          <p>Active Policies</p>
+        </div>
+        <div class="col-md-4">
+          <h1>100+</h1>
+          <p>Claims Settled</p>
+        </div>
+        <div class="col-md-4">
+          <h1>5+</h1>
+          <p>Years of Trust</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Stats Section end-->
+
+  <!-- Our Team start  -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Meet Our Experts</h1>
+    <p class="text-muted">Professional advisors dedicated to your financial security</p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Member -->
+    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="team-card text-center">
+        <div class="team-img">
+          <img src="img/team-1.jpg" alt="">
+          <div class="team-overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h5 class="mt-3 mb-0">Vinay Kumar</h5>
+        <small class="text-muted">Insurance Advisor</small>
+      </div>
+    </div>
+
+    <!-- Repeat -->
+    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="team-card text-center">
+        <div class="team-img">
+          <img src="img/team-2.jpg" alt="">
+          <div class="team-overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h5 class="mt-3 mb-0">Amit Sharma</h5>
+        <small class="text-muted">Financial Planner</small>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+      <div class="team-card text-center">
+        <div class="team-img">
+          <img src="img/team-3.jpg" alt="">
+          <div class="team-overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h5 class="mt-3 mb-0">Neha Verma</h5>
+        <small class="text-muted">Support Head</small>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+      <div class="team-card text-center">
+        <div class="team-img">
+          <img src="img/team-4.jpg" alt="">
+          <div class="team-overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h5 class="mt-3 mb-0">Rahul Mehta</h5>
+        <small class="text-muted">Claims Expert</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- Our Team end  -->
+
+  <!-- review section start -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">What Our Clients Say</h1>
+    <p class="text-muted">Real experiences from our satisfied customers</p>
+  </div>
+
+  <div class="owl-carousel testimonial-carousel">
+
+    <div class="testimonial-card text-center">
+      <img src="img/testimonial-1.jpg" class="rounded-circle mb-3" width="80">
+      <p>Excellent service and honest advice. Highly recommended!</p>
+      <h5>Raj Kamal Arora</h5>
+      <small>Business Owner</small>
+    </div>
+
+    <div class="testimonial-card text-center">
+      <img src="img/testimonial-2.jpg" class="rounded-circle mb-3" width="80">
+      <p>Very professional and guided me perfectly for my insurance needs.</p>
+      <h5>Naveen Arora</h5>
+      <small>Entrepreneur</small>
+    </div>
+
+    <div class="testimonial-card text-center">
+      <img src="img/testimonial-3.jpg" class="rounded-circle mb-3" width="80">
+      <p>Great experience and quick support during claim process.</p>
+      <h5>Rajiv Ranjan</h5>
+      <small>Engineer</small>
+    </div>
+
+  </div>
+</section>
+  <!-- review section end -->
+
+  <!-- Car insurance start-->
+  <section class="car-strip text-center py-2">
+    <h4 style="color: #0a2753;">
+      Car insurance starts at <strong>Rs2094*</strong>
+    </h4>
+  </section>
+  <!-- Car insurance start -->
+
+  <!-- Contact Form start -->
+    <section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold">Get in Touch</h2>
+      <p class="lead text-secondary">Have questions? Our team is ready to help you</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Left Column: Contact Info -->
+      <div class="col-lg-6">
+        <h3 class="h4 fw-bold mb-3">Contact Information</h3>
+        <p class="text-secondary mb-4">
+          Reach out to us through any of these channels. We're here to assist you with all your insurance needs.
+        </p>
+
+        <!-- Info Cards -->
+        <div class="row g-3">
+          <!-- Phone -->
+          <div class="col-12">
+            <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm border border-light hover-border-primary transition" style="transition: border-color 0.3s;">
+              <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width:50px; height:50px;">
+                <i class="fa-solid fa-phone fs-4" style="color: rgb(82, 105, 226);"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold mb-1">Phone</h5>
+                <p class="mb-0">+91  80763 64822</p>
+                <small class="text-muted">Monday - Friday, 10am - 6pm</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-12">
+            <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm border border-light hover-border-primary transition" style="transition: border-color 0.3s;">
+              <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width:50px; height:50px;">
+                <i class="fa-regular fa-envelope fs-4" style="color: rgb(82, 105, 226);"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold mb-1">Email</h5>
+                <p class="mb-0">sales@yourinsurancewala.com</p>
+                <small class="text-muted">We'll respond within 24 hours</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <!-- <div class="col-12">
+            <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm border border-light hover-border-primary transition" style="transition: border-color 0.3s;">
+              <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width:50px; height:50px;">
+                <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold mb-1">Headquarters</h5>
+                <p class="mb-0">123 Insurance Plaza</p>
+                <p class="mb-0">New York, NY 10001</p>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Business Hours -->
+          <div class="col-12">
+            <div class="d-flex align-items-start p-3 bg-white rounded shadow-sm border border-light hover-border-primary transition" style="transition: border-color 0.3s;">
+              <div class="flex-shrink-0 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width:50px; height:50px;">
+                <i class="fa-regular fa-clock fs-4 " style="color: rgb(82, 105, 226);"></i>
+              </div>
+              <div>
+                <h5 class="fw-semibold mb-1">Business Hours</h5>
+                <p class="mb-0">Mon - Fri: 10am - 6pm</p>
+                <p class="mb-0">Sat: 10am - 4pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Card -->
+        <div class="bg-primary text-white rounded-3 p-4 mt-4">
+          <h5 class="fw-bold mb-2">24/7 Emergency Claims</h5>
+          <p class="text-white-50 mb-2">For urgent claims assistance, call our emergency hotline</p>
+          <p class="h4 fw-bold">+91  80763 64822</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm border-0 rounded-3">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-4">Send us a Message</h5>
+            <form>
+              <div class="mb-3">
+                <label for="contactName" class="form-label">Full Name *</label>
+                <input type="text" class="form-control" id="contactName" placeholder="John Doe" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="john@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactPhone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="contactPhone" placeholder="(555) 123-4567">
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" class="form-control" id="subject" placeholder="How can we help you?" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message *</label>
+                <textarea class="form-control" id="contactMessage" rows="5" placeholder="Please provide details about your inquiry..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Contact Form end -->
+
+  
+  <!-- footer section  start -->
+  <footer class="bg-dark text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Brand & Description -->
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <img src="./images/Your Insurance wala logo.png" alt="Logo" id="logo-img">
+          <h5>Your Insurance Wala</h5>
+          <hr class="border-secondary">
+                <!-- <h3 class="fw-bold mb-4">Contact Us</h3>
+                <p class="mb-0">
+                  📞 +91-XXXXXXXXXX <br>
+                  📧 your@email.com <br>
+                  📍 Your City
+                </p> -->
+            <div class="d-flex justify-content-center justify-content-md-start gap-3">
+              <a href="https://www.facebook.com/yourpage" target="_blank" class="text-decoration-none text-primary fs-4">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/yourhandle" target="_blank" class="text-decoration-none text-info fs-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-decoration-none text-primary fs-4">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/yourhandle" target="_blank" class="text-decoration-none text-danger fs-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+              <!-- </div> -->
+            <!-- </div>
+          </section> -->
+        </div>
+
+        <!-- Products -->
+        <div class="col-md-2 mb-4 text-center text-md-start">
+          <h5 class="fw-bold">Products</h5>
+          <ul class="list-unstyled mt-3">
+            <li><a href="#" class="text-light text-decoration-none">Health Insurance</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Life Insurance</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Auto Insurance</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Home Insurance</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Business Insurance</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-md-2 mb-4 text-center text-md-start">
+          <h5 class="fw-bold">Company</h5>
+          <ul class="list-unstyled mt-3">
+            <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Claims Process</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Resources</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-4 mb-4 text-center text-md-start">
+          <h5 class="fw-bold">Contact</h5>
+          <p class="mt-3 mb-1">8076364822</p>
+          <p class="mb-1">Mon-Fri 10am-06pm</p>
+          <p class="mb-1">sales@yourinsurancewala.com</p>
+          <p class="mb-0">Rohini, New Delhi - 110086</p>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary">
+
+      <!-- Bottom Legal Links -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0 text-white">© 2026 Insurance Solutions. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-light text-decoration-none">Privacy Policy</a>
+          <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          <a href="#" class="text-light text-decoration-none">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- footer section  end -->
+
+  <!-- jQuery (REQUIRED for Owl Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel -->
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- WOW.js -->
+<script src="lib/wow/wow.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+      <script>
+  new WOW().init();
+
+  $('.testimonial-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    center: true,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+
+//   $('.protect-carousel').owlCarousel({
+//   loop: true,
+//   margin: 20,
+//   autoplay: true,
+//   autoplayTimeout: 2500,
+//   smartSpeed: 800,
+//   dots: true,
+//   responsive: {
+//     0: { items: 2 },
+//     576: { items: 3 },
+//     768: { items: 4 },
+//     992: { items: 5 }
+//   }
+// });
+
+$('.protect-carousel').owlCarousel({
+  loop: false,            // ❌ stop repeating
+  margin: 20,
+  autoplay: true,        // ❌ no auto repeat feel
+  dots: true,
+  nav: false,
+  smartSpeed: 600,
+  slideBy: 1,
+
+  responsive: {
+    0: { items: 1 },
+    576: { items: 2 },
+    768: { items: 3 },
+    992: { items: 4 }   // ✅ only 4 visible
+  }
+});
+</script>
+
+
+
+</body>
+
+</html>
